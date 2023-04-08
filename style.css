@@ -31,13 +31,20 @@ h1{
     margin: 0px 20px;
     border-radius:20px;
     padding: 20px;
-
 }
-#cont{
-    background-color: magenta;
+.status1{
+    margin: 30px;
     border-radius:20px;
-    box-shadow: 5px 5px 10px gray;
-    padding:40px;
-
-
+    padding: 40px;
+    width: 400px;
+    position: relative;
+    left:50px;
+}
+.status2{
+    margin: 30px;
+    border-radius:20px;
+    padding: 40px;
+    width: 400px;
+    position: relative;
+    right:50px;
 }

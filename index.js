@@ -11,46 +11,37 @@ btn.addEventListener("click",function(){
 
 const dep = document.getElementById("depositAdd");
 dep.addEventListener("click",function(){
-   const inVal= document.getElementById("depVal").value;
-   const depositInput= parseFloat(inVal);
+  const depositInput= getInputNum("depVal");
 
-   const showVal = document.getElementById("deph1").innerText;
-   const currentDeposit=parseFloat(showVal);
-    
-     const sum=currentDeposit+depositInput;
-
-     const Balance = document.getElementById("deph3").innerText; 
-
-     const MainBalance = parseFloat(Balance);
-     // console.log(preValueDep3);
-
-     const mainBal=MainBalance+depositInput;
-
-   //console.log(sum);
-    document.getElementById("deph1").innerText=sum;
-    document.getElementById("deph3").innerText=mainBal;
-
+   hisabkitab("deph1",depositInput);  
+   hisabkitab("deph3",depositInput);
 
     document.getElementById("depVal").value="";
 });
 
+function hisabkitab(id,depositWithdraw){
+  const Balance = document.getElementById(id).innerText; 
+  const MainBalance = parseFloat(Balance);
+  const mainBal=MainBalance+depositWithdraw;
+  document.getElementById(id).innerText=mainBal;
+
+}
+function getInputNum(id){
+  const xxx= document.getElementById(id).value;
+  const yyy= parseFloat(xxx);
+  return yyy;
+
+}
+
 const wdb = document.getElementById("WithdrawBtn");
 wdb.addEventListener("click",function(){
-   
-  const withInp = document.getElementById("withVal").value;
-  const withdraw = parseFloat(withInp);
 
-  const withdr= document.getElementById("deph2").innerText;
-  const CurrentMoney = parseFloat(withdr);
+  const withdraw= getInputNum("withVal");
 
-  const totalWithDraw = CurrentMoney+withdraw;
+  hisabkitab("deph2",withdraw);
 
-  document.getElementById("deph2").innerText=totalWithDraw;
-  
-  const remain = document.getElementById("deph3").innerText;
- // console.log(remain);
+  hisabkitab("deph3", -1*withdraw);
 
-  const remainbal = remain-withInp;
-  document.getElementById("deph3").innerText=remainbal;
   document.getElementById("withVal").value="";
-}) 
+});
+

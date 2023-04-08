@@ -27,42 +27,44 @@
             <div class="col-md-4">
                 <div class="deposit status">
                     <h4>Deposit</h4>
-                    <h2>$00</h2>
+                   <h2>$ <span id="deph1" >00</span> </h2> 
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="withdraw status">
                     <h4>Withdraw</h4>
-                    <h2>$00</h2>
+                    <h2>$ <span id="deph2" >00</span> </h2> 
                 </div>
             </div>
             <div class="col-md-4 ">
                 <div class="Balance status">
                     <h4>Balance</h4>
-                    <h2>$1200</h2>
+                    <h2>$ <span id="deph3" >1200</span> </h2> 
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                    <div id="cont">
-                        <h2>Deposit</h2>
-                        <input type="text" placeholder="amount">
-                        <button class="btn-success">Deposit</button>
-                    </div>
-                 <div class="col-md-6">
-                     <div id="cont">
-                        <h2>withdraw</h2>
-                        <input type="text" placeholder="amount">
-                        <button class="btn-success">withdraw</button>
-                   </div>
-               </div>
+          <div class="row">
+              <div class="col-sm-6">
+               <div class="deposit status1">
+                  <h2>Deposit</h2>
+                  <input id="depVal" type="text" placeholder="amount" value="">
+                  <button id="depositAdd" class="btn-success">Deposit</button> 
+               </div>           
+              </div>
+              <div class="col-sm-6">
+               <div class="withdraw status2">
+                  <h2>Withdraw</h2>
+                  <input id="withVal" type="text" placeholder="amount" value="">
+                  <button id="WithdrawBtn" class="btn-success">withdraw</button>
+              </div>
+           </div>
 
-            </div>
-        </div>
+          </div>
 
-    </div>
+   </div>
+  
+
 
     <script src="index.js"></script>
 
